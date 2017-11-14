@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="css/controlador.css">
+</head>
+<body>
+
+<div class="container">
+	<div class="row" style="text-align: center;">
+		<h4>Simulador de esperanza de vida</h4>
+		
+	</div>
+	<div class="row">
+
+		<div class="row col-md-4">
+			<label>Variables de Estado</label><br>
+
+			<select id="slc-pais" class="form-control">
+				<option disabled selected>Seleccionar año del pais</option>
+				
+			</select>
+			<label>Año de poblacion</label>
+			
+			<select id="slc-anio" class="form-control">
+				<option disabled selected>Seleccionar año del pais</option>
+				
+			</select>
+			<label>Nacimientos por 1000 personas</label>
+			<input id="txt-poblacionInicial" type="text" name="" class="form-control">
+
+			
+
+			
+			
+			
+		</div>
+		<div class="row col-md-7">
+			<label>Variables de entrada</label><br>
+			
+			<table class="table">
+				<tr>
+					<td>
+						<label>Muertes minimas </label>
+						<input type="text" name="" class="form-control" placeholder="0--">
+					</td>
+					<td>
+						<label>Muertes maximas: </label>
+						<input type="text" name="" class="form-control" placeholder="--1000">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button class="btn btn-warning" id="btn-calcular">Calcular</button>
+					</td>
+				</tr>
+
+			</table>
+			
+		
+
+			
+			
+		</div>
+		<div class="row col-md-12">
+			<label>Grafico representativo</label><br>
+		
+
+			<canvas id="myChart" width="500" height="200"></canvas>
+			
+		</div>
+		<div class="row col-md-12">
+			<table class="table" id="tbl-mostrarDatos"> 
+				<thead style="text-align: center;">
+
+					<th>Edad</th>
+					
+					<th>Ix</th>
+					<th>dx</th>
+					<th>qx</th>
+					<th>px</th>
+					<th>kx</th>
+					<th>Lx</th>
+					<th>Tx</th>
+					<th>ex</th>
+
+					
+				</thead>
+				<tbody>
+				
+					<tr>
+						<td>
+							<input type="text" name="" class="form-control">
+						</td>
+						<td>
+							<input type="text" name="" class="form-control">
+						</td>
+						<td>
+							<input type="text" name="" class="form-control">
+						</td>
+					
+						<td>
+							<input type="text" name="" class="form-control">
+						</td>
+						<td>
+							<input type="text" name="" class="form-control">
+						</td>
+						<td>
+							<input type="text" name="" class="form-control">
+						</td>
+						<td>
+							<input type="text" name="" class="form-control">
+						</td>
+					
+						<td>
+							<input type="text" name="" class="form-control">
+						</td>
+						<td>
+							<input type="text" name="" class="form-control">
+						</td>
+					</tr>
+				</tbody>
+			
+			</table>
+			
+		</div>
+		
+	</div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/controlador.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/Chart.js"></script>
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+let chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        datasets: [{
+            label: 'First dataset',
+            data: [1000,850,750,650,550, 450,400,300,250, 0]
+        }],
+        labels: [0,10,20,30,40,50,60,70,80]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    suggestedMin: 50,
+                    suggestedMax: 100
+                }
+            }]
+        }
+    }
+});
+</script>
+</html>
