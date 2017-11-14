@@ -45,16 +45,17 @@
 				<tr>
 					<td>
 						<label>Muertes minimas </label>
-						<input type="text" name="" class="form-control" placeholder="0--">
+						<input id="txt-MinMuertes" type="text" name="" class="form-control" placeholder="0--">
 					</td>
 					<td>
 						<label>Muertes maximas: </label>
-						<input type="text" name="" class="form-control" placeholder="--1000">
+						<input id="txt-MaxMuertes" type="text" name="" class="form-control" placeholder="--1000">
 					</td>
 				</tr>
 				<tr>
 					<td>
 						<button class="btn btn-warning" id="btn-calcular">Calcular</button>
+						<button class="btn btn-warning" id="btn-calcularAleatorio">Calcular con aleatoriedad</button>
 					</td>
 				</tr>
 
@@ -79,10 +80,9 @@
 					<th>Edad</th>
 					
 					<th>Ix</th>
+					<th>lx</th>
 					<th>dx</th>
 					<th>qx</th>
-					<th>px</th>
-					<th>kx</th>
 					<th>Lx</th>
 					<th>Tx</th>
 					<th>ex</th>
@@ -91,41 +91,20 @@
 				</thead>
 				<tbody>
 				
-					<tr>
-						<td>
-							<input type="text" name="" class="form-control">
-						</td>
-						<td>
-							<input type="text" name="" class="form-control">
-						</td>
-						<td>
-							<input type="text" name="" class="form-control">
-						</td>
-					
-						<td>
-							<input type="text" name="" class="form-control">
-						</td>
-						<td>
-							<input type="text" name="" class="form-control">
-						</td>
-						<td>
-							<input type="text" name="" class="form-control">
-						</td>
-						<td>
-							<input type="text" name="" class="form-control">
-						</td>
-					
-						<td>
-							<input type="text" name="" class="form-control">
-						</td>
-						<td>
-							<input type="text" name="" class="form-control">
-						</td>
-					</tr>
+				
 				</tbody>
 			
 			</table>
 			
+		</div>
+		<div class="row col-md-12">
+			
+				
+			IX:poblacion de muestra que va decreciendo, 
+			lX:La curva de sobrevivencia,
+			dx: Indice de mortalidad,
+			
+
 		</div>
 		
 	</div>

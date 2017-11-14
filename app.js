@@ -60,6 +60,19 @@ app.get("/obtenernatalidad",function(peticion,respuesta){
 	
 });
 
+app.get("/obtenerMortalidad",function(peticion,respuesta){
+	//console.log(peticion.query.codigoPlanEstudio);
+	conexion.query(
+			'SELECT cantidadDefuncion, edadInicial,edadFinal FROM tblMortalidad WHERE anioMortalidad=? AND idPais=? Order by ABS(edadInicial)',
+			[peticion.query.anio,peticion.query.codigo],
+			function(err, filas, campos){
+				respuesta.send(JSON.stringify(filas));
+			}
+		);
+
+	
+});
+
 app.listen(3001,function() {
 	console.log("Servidor iniciado en el puerto 3001")
 })
